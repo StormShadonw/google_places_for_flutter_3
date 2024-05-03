@@ -1,4 +1,4 @@
-part of google_places_for_flutter;
+part of google_places_for_flutter_3;
 
 class SearchGooglePlacesWidget extends StatefulWidget {
   SearchGooglePlacesWidget({
@@ -17,6 +17,9 @@ class SearchGooglePlacesWidget extends StatefulWidget {
     this.placeType,
     this.darkMode = false,
     this.key,
+    this.initialContainerHeight,
+    this.inputDecoration,
+    this.textStyle,
   })  : assert((location == null && radius == null) ||
             (location != null && radius != null)),
         super(key: key);
@@ -26,7 +29,16 @@ class SearchGooglePlacesWidget extends StatefulWidget {
   /// API Key of the Google Maps API.
   final String? apiKey;
 
-  /// Placeholder text to show when the user has not entered any input.
+  /// Initial height for the container, default is 75.
+  final double? initialContainerHeight;
+
+  /// Decoration for the textfield. If provided placeholder will not be taken into account.
+  final InputDecoration? inputDecoration;
+
+  /// Style for the placeholder text. If inputDecoration is provided will not be taken into account.
+  final TextStyle? textStyle;
+
+  /// Placeholder text to show when the user has not entered any input. If inputDecoration is provided will not be taken into account.
   final String? placeholder;
 
   /// The callback that is called when one Place is selected by the user.
@@ -102,7 +114,10 @@ class _SearchMapPlaceWidgetState extends State<SearchGooglePlacesWidget>
     geocode = Geocoding(apiKey: widget.apiKey, language: widget.language);
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 500));
-    _containerHeight = Tween<double>(begin: 55, end: 364).animate(
+    _containerHeight = Tween<double>(
+            begin: widget.initialContainerHeight ?? 75,
+            end: (widget.initialContainerHeight ?? 75) * 7.5)
+        .animate(
       CurvedAnimation(
         curve: Interval(0.0, 0.5, curve: Curves.easeInOut),
         parent: _animationController!,
@@ -181,7 +196,7 @@ class _SearchMapPlaceWidgetState extends State<SearchGooglePlacesWidget>
         children: <Widget>[
           Expanded(
             child: TextField(
-              decoration: _inputStyle(),
+              decoration: widget.inputDecoration ?? _inputStyle(),
               controller: _textEditingController,
               onSubmitted: (_) => _selectPlace(),
               onEditingComplete: _selectPlace,
@@ -248,9 +263,10 @@ class _SearchMapPlaceWidgetState extends State<SearchGooglePlacesWidget>
       hintText: this.widget.placeholder,
       border: InputBorder.none,
       contentPadding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
-      hintStyle: TextStyle(
-        color: widget.darkMode! ? Colors.grey[100] : Colors.grey[850],
-      ),
+      hintStyle: widget.textStyle ??
+          TextStyle(
+            color: widget.darkMode! ? Colors.grey[100] : Colors.grey[850],
+          ),
     );
   }
 

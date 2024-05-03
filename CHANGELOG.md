@@ -1,7 +1,2 @@
 ## 1.0.0
-
-* Initial release with null safety
-
-## 1.0.1
-
-* Updated documentation
+* Initial release with forked from the origin package(contactlutforrahman/google_places_for_flutter) with some improvements.

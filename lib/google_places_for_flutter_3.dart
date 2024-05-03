@@ -1,4 +1,4 @@
-library google_places_for_flutter;
+library google_places_for_flutter_3;
 
 import 'dart:convert' as JSON;
 import 'package:http/http.dart' as http;

@@ -1,4 +1,4 @@
-part of google_places_for_flutter;
+part of google_places_for_flutter_3;
 
 class Place {
   Place(
