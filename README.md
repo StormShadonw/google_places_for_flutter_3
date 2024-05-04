@@ -1,4 +1,4 @@
-# [Google Places for Flutter](https://pub.dev/packages/google_places_for_flutter)
+# [Google Places for Flutter_3](https://pub.dev/packages/google_places_for_flutter_3)
 
 A Flutter package which uses the Google Maps API to make a TextField that autocomplete places as the user types in.
 It also gives coordinates and more ...
