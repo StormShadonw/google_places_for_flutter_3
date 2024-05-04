@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_places_for_flutter_3/google_places_for_flutter.dart';
 import 'dart:async';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_places_for_flutter_3/google_places_for_flutter_3.dart';
 
 void main() {
   runApp(MyApp());
