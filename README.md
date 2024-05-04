@@ -5,7 +5,9 @@ It also gives coordinates and more ...
 
 Extended [Google Maps for Flutter](https://pub.dev/packages/google_maps_flutter) plugin
 
-[![pub package](https://img.shields.io/pub/v/google_places_for_flutter.svg)](https://pub.dev/packages/google_places_for_flutter)
+This is a package that seeks to maintain the package that has not been updated for more than 3 years: [google_places_for_flutter](https://pub.dev/packages/google_places_for_flutter)
+
+[![pub package](https://img.shields.io/pub/v/google_places_for_flutter_3.svg)](https://pub.dev/packages/google_places_for_flutter_3)
 
 
 ## Installation
