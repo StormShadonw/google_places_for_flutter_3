@@ -6,3 +6,6 @@
 
 ## 1.0.2
 * Adding some images to the readme file
+
+## 1.0.3
+* Update readme file
