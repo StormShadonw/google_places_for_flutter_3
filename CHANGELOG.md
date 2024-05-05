@@ -3,3 +3,6 @@
 
 ## 1.0.1
 * Making some pub.dev points impromevemnts
+
+## 1.0.2
+* Adding some images to the readme file
