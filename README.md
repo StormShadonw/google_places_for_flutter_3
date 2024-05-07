@@ -22,7 +22,7 @@ or
 
 ```
 dependencies:
-  google_places_for_flutter_3: ^1.0.0
+  google_places_for_flutter_3: ^1.0.4
 
 ```
 
