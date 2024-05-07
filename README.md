@@ -13,7 +13,7 @@ This is a package that seeks to maintain the package that has not been updated f
 ## Installation
 
 ``` 
-flutter pub add google_places_for_flutter
+flutter pub add google_places_for_flutter_3
  
 ```
 
@@ -22,7 +22,7 @@ or
 
 ```
 dependencies:
-  google_places_for_flutter: ^1.0.0
+  google_places_for_flutter_3: ^1.0.0
 
 ```
 
@@ -30,7 +30,7 @@ dependencies:
 
 ```dart
 
-import 'package:google_places_for_flutter/google_places_for_flutter.dart';
+import 'package:google_places_for_flutter/google_places_for_flutter_3.dart';
 
 SearchGooglePlacesWidget(
     placeType: PlaceType.address, // PlaceType.cities, PlaceType.geocode, PlaceType.region etc

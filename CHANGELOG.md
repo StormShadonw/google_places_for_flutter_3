@@ -9,3 +9,6 @@
 
 ## 1.0.3
 * Update readme file
+
+## 1.0.4
+* Update readme file
